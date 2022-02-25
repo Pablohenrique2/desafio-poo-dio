@@ -6,7 +6,7 @@ public class main {
     public static void main(String[] args) {
      cursos cursos1 =new cursos();
 
-     cursos1.setTitulo("cursos javas");
+     cursos1.setTitulo("cursos  de java");
      cursos1.setDescricao("Descrição java curso");
      cursos1.setCargaHoraria(8);
 
@@ -26,8 +26,48 @@ public class main {
 
 
 
-     System.out.println(cursos1);
+    /* System.out.println(cursos1);
      System.out.println(cursos2);
-     System.out.println(mentoria);
+     System.out.println(mentoria);*/
+
+     bootcamp bootcamp = new bootcamp();
+     bootcamp.setNome("bootcamp java developer");
+     bootcamp.setDescricao("cursos java");
+     bootcamp.getConteudos().add(cursos1);
+     bootcamp.getConteudos().add(cursos2);
+     bootcamp.getConteudos().add(mentoria);
+
+     dev devpablo =new dev();
+
+     devpablo.setNome("pablo");
+     devpablo.inscreverBootcamp(bootcamp);
+     System.out.println("conteudo inscritos" + devpablo.getConteudosInscrito());
+     System.out.println(".");
+     devpablo.progredir();
+
+     System.out.println("conteudo inscritos" + devpablo.getConteudosInscrito());
+     System.out.println("conteudo concluidos" + devpablo.getConteudosConcluidos());
+
+     System.out.println("XP!" + devpablo.calcularaTotalXp());
+
+     System.out.println(".........");
+     dev devlorrane =new dev();
+
+     devlorrane.setNome("lorrane");
+     devlorrane.inscreverBootcamp(bootcamp);
+     System.out.println("conteudo inscritos" + devlorrane.getConteudosInscrito());
+     devlorrane.progredir();
+     System.out.println("..");
+     System.out.println("conteudo inscritos" + devlorrane.getConteudosInscrito());
+     System.out.println("conteudo concluidos" + devlorrane.getConteudosConcluidos());
+     System.out.println("XP!" + devlorrane.calcularaTotalXp());
+
+
+
+
+
+
+
+
     }
 }
